@@ -38,15 +38,40 @@ function getCoordinates(){
 }
 function updateCoordinateX1(){
     XCoords[0] = document.getElementById("CoordX1").valueAsNumber;
+    var DistanceLeft = (XCoords[0]+180)*((document.getElementById("WorldMapImg").offsetWidth)/360) + 52;
+    var AreaElement = document.getElementById("TestDiv");
+    AreaElement.style.left = `${DistanceLeft}px`;
+    updateCoordinateX2();
 }
 function updateCoordinateY1(){
     YCoords[0] = document.getElementById("CoordY1").valueAsNumber;
+    var DistanceTop = (90-YCoords[0])*((document.getElementById("WorldMapImg").offsetHeight)/180) + 68;
+    var AreaElement = document.getElementById("TestDiv");
+    AreaElement.style.top = `${DistanceTop}px`;
+    updateCoordinateY1();
 }
 function updateCoordinateX2(){
-    XCoords[1] = document.getElementById("CoordX2").valueAsNumber;
+    var CoordX2 = document.getElementById("CoordX2").valueAsNumber;
+    if(CoordX2 != NaN){
+        XCoords[1] = CoordX2;
+        if(document.getElementById("TestDiv").style.left != ""){
+            var X1Position = (XCoords[0]+180)*((document.getElementById("WorldMapImg").offsetWidth)/360) + 52;
+            var X2Position = (XCoords[1]+180)*((document.getElementById("WorldMapImg").offsetWidth)/360) + 52;
+            document.getElementById("TestDiv").style.width = `${X2Position - X1Position}px`;
+        }
+    }
+    CanDrawArea();
 }
 function updateCoordinateY2(){
-    YCoords[1] = document.getElementById("CoordY2").valueAsNumber;
+    var CoordY2 = document.getElementById("CoordY2").valueAsNumber;
+    if(CoordY2 != NaN){
+        YCoords[1] = CoordY2;
+        if(document.getElementById("TestDiv").style.left != ""){
+            var Y1Position = (90-YCoords[0])*((document.getElementById("WorldMapImg").offsetHeight)/180) + 68;
+            var Y2Position = (90-YCoords[1])*((document.getElementById("WorldMapImg").offsetHeight)/180) + 68;
+            document.getElementById("TestDiv").style.height = `${Y2Position - Y1Position}px`;
+        }
+    }
 }
 async function SubmitCoordinates(){
     if(XCoords[0] != null && XCoords[1] != null && YCoords[0] != null && YCoords[1] != null){
@@ -56,6 +81,15 @@ async function SubmitCoordinates(){
             body: JSON.stringify({XCoords: XCoords, YCoords: YCoords})
         });
         console.log(response.status);
+    }
+}
+function CanDrawArea(){
+    var CoordX1 = document.getElementById("CoordX1").valueAsNumber;
+    var CoordY1 = document.getElementById("CoordY1").valueAsNumber;
+    var CoordX2 = document.getElementById("CoordX2").valueAsNumber;
+    var CoordY2 = document.getElementById("CoordY2").valueAsNumber;
+    if(CoordX1 != NaN && CoordY1 != NaN && CoordX2 != NaN && CoordY2 != NaN){
+        document.getElementById("TestDiv").style.display = "block";
     }
 }
 window.addEventListener('mousemove', mousemove);
