@@ -1,31 +1,35 @@
-body{
-    display: block;
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
 }
-#MainContentContainer{
-    margin: 50px;
-    display: flex;
+#MainContentContainer {
+  margin: 50px;
+  display: flex;
 }
-#WorldMapContainer{
-    border-style: solid;
-    border-width: 2px;
-    width: 70%;
+#WorldMapContainer {
+  border-style: solid;
+  border-width: 2px;
+  width: 70%;
 }
-#WorldMapImg{
-    width: 100%;
+#WorldMapImg {
+  width: 100%;
 }
-#CoordsInputs{
-    border-style: solid;
-    border-width: 2px;
-    width: 70%;
-    width: 25%;
-    margin: 0 2.5%;
+#CoordsInputs {
+  border-style: solid;
+  border-width: 2px;
+  width: 70%;
+  width: 25%;
+  margin: 0 2.5%;
 }
-#Coords1, #Coords2{
-    width: 100%;
+#Coords1,
+#Coords2 {
+  width: 100%;
 }
-#TestDiv{
-    position: absolute;
-    border-style: solid;
-    border-width: 2px;
-    background-color: rgba(255, 255, 255, 0.5);
+#TestDiv {
+  position: absolute;
+  border-style: solid;
+  border-width: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
 }

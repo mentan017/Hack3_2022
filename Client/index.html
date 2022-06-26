@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Hack3 Project</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Aqua Heatmap</title>
+  </head>
+  <body>
     <h1>Test</h1>
     <div id="MainContentContainer">
-        <div id="WorldMapContainer">
-            <img id="WorldMapImg" src="./Images/36-369695_world-objects-land-high-resolution-world-map-blank.png">
+      <div id="WorldMapContainer">
+        <img
+          id="WorldMapImg"
+          src="./Images/36-369695_world-objects-land-high-resolution-world-map-blank.png"
+        />
+      </div>
+      <div id="CoordsInputs">
+        <p>Coordinates 1:</p>
+        <div id="Coords1">
+          <input id="CoordX1" type="number" min="-180" max="180" />
+          <input id="CoordY1" type="number" min="-90" max="90" />
         </div>
-        <div id="CoordsInputs">
-            <p>Coordinates 1: </p>
-            <div id="Coords1">
-                <input id="CoordX1" type="number" min="-180" max="180">
-                <input id="CoordY1" type="number" min="-90" max="90">
-            </div>
-            <p>Coordinates 2: </p>
-            <div id="Coords2">
-                <input id="CoordX2" type="number" min="-180" max="180">
-                <input id="CoordY2" type="number" min="-90" max="90">
-            </div>
-            <button id="SubmitBtn" tyoe="button">Submit</button>
+        <p>Coordinates 2:</p>
+        <div id="Coords2">
+          <input id="CoordX2" type="number" min="-180" max="180" />
+          <input id="CoordY2" type="number" min="-90" max="90" />
         </div>
+        <button id="SubmitBtn" tyoe="button">Submit</button>
+      </div>
     </div>
-    <div id="TestDiv" style="display: none;"></div>
+    <div id="TestDiv" style="display: none"></div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

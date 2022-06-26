@@ -1,0 +1,96 @@
+body {
+  background-image: url("./Images/AquaBackground.png");
+  background-color: #000000;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #67aeff;
+
+  position: absolute;
+  top: 143px;
+  bottom: 800px;
+
+  font-family: "museoModerno", cursive;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10rem;
+}
+
+.title_description {
+  font-size: 1.5em;
+  color: #f0f0f0;
+  position: absolute;
+  width: 950px;
+  line-height: 60px;
+  text-align: center;
+  bottom: 400px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  margin: 0;
+  padding: 0;
+
+  width: 99.9%;
+  height: 99vh;
+
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.rounded {
+  width: 200px;
+  height: 1px;
+  border: rgba(255, 255, 255, 0.5) solid 1.2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  border-radius: 5px;
+  bottom: 580px;
+}
+
+.gradient {
+  background: linear-gradient(90.16deg, #257cff 30%, #bed8ff 80%, #c8deff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+}
+
+.button {
+  position: relative;
+  top: 650px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  text-decoration: #f0f0f0;
+  background: linear-gradient(90deg, #0066ff -2.12%, #4e95ff 102.47%);
+  box-shadow: 0px 0px 6px 2px #0066ff;
+  line-height: 36px;
+  border-radius: 27px;
+  border: 0px;
+  transition: all 0.3s ease-in-out;
+  width: 250px;
+  height: 64px;
+  color: #c8deff;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+#hero {
+}
