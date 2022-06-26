@@ -20,11 +20,20 @@ function getCoordinates(){
         document.getElementById("CoordX1").valueAsNumber = XCoord;
         YCoords[0] = YCoord;
         document.getElementById("CoordY1").valueAsNumber = YCoord;
+        
+        var AreaElement = document.getElementById("TestDiv");
+        AreaElement.style.top = `${PageY}px`;
+        AreaElement.style.left = `${PageX}px`;
     }else if(XCoords[1] == null || YCoords[0] == null){
         XCoords[1] = XCoord;
         document.getElementById("CoordX2").valueAsNumber = XCoord;
         YCoords[1] = YCoord;
         document.getElementById("CoordY2").valueAsNumber = YCoord;
+        
+        var AreaElement = document.getElementById("TestDiv");
+        AreaElement.style.width = `${PageX - parseInt((AreaElement.style.left).replace("px"))}px`;
+        AreaElement.style.height = `${PageY - parseInt((AreaElement.style.top).replace("px"))}px`;
+        AreaElement.style.display = "block";
     }
 }
 function updateCoordinateX1(){
