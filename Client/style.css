@@ -1,0 +1,25 @@
+body{
+    display: block;
+}
+#MainContentContainer{
+    margin: 50px;
+    display: flex;
+}
+#WorldMapContainer{
+    border-style: solid;
+    border-width: 2px;
+    width: 70%;
+}
+#WorldMapImg{
+    width: 100%;
+}
+#CoordsInputs{
+    border-style: solid;
+    border-width: 2px;
+    width: 70%;
+    width: 25%;
+    margin: 0 2.5%;
+}
+#Coords1, #Coords2{
+    width: 100%;
+}
